@@ -1,0 +1,468 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Portafolio profesional de Yurley Tatiana Cárdenas Valencia, estudiante de Administración Tecnológica del ITM.">
+
+    <title>Yurley Tatiana Cárdenas | Portafolio Profesional</title>
+
+    <style>
+        :root {
+            --primary: #064e3b;
+            --secondary: #047857;
+            --accent: #34d399;
+            --background: #ecfdf5;
+            --white: #ffffff;
+            --text: #334155;
+            --light-green: #d1fae5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* ENCABEZADO */
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            font-size: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* PRESENTACIÓN PRINCIPAL */
+
+        .hero {
+            min-height: 440px;
+            background: linear-gradient(
+                120deg,
+                #064e3b,
+                #059669
+            );
+            color: white;
+            padding: 100px 10%;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero .tag {
+            color: #a7f3d0;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 6vw, 58px);
+            line-height: 1.2;
+            margin: 20px 0;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #d1fae5;
+            max-width: 650px;
+        }
+
+        .button {
+            display: inline-block;
+            background: var(--accent);
+            color: #064e3b;
+            padding: 12px 25px;
+            margin-top: 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background: white;
+        }
+
+        /* CONTENIDO */
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 25px;
+        }
+
+        section {
+            margin-bottom: 55px;
+            scroll-margin-top: 30px;
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 27px;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--secondary);
+            padding-left: 15px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(6, 78, 59, 0.08);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .experience {
+            border-left: 4px solid var(--secondary);
+            padding-left: 25px;
+        }
+
+        /* CONTACTO */
+
+        .contact {
+            background: var(--primary);
+            color: white;
+            padding: 45px;
+            border-radius: 15px;
+        }
+
+        .contact h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact a {
+            color: #6ee7b7;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* PIE DE PÁGINA */
+
+        footer {
+            text-align: center;
+            background: #022c22;
+            color: #d1fae5;
+            padding: 25px;
+            font-size: 13px;
+        }
+
+        /* DISEÑO RESPONSIVE */
+
+        @media (max-width: 650px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0;
+            }
+
+            .hero {
+                padding: 70px 8%;
+            }
+
+            .contact {
+                padding: 25px;
+            }
+        }
+
+        /* IMPRESIÓN */
+
+        @media print {
+
+            header nav,
+            .button {
+                display: none;
+            }
+
+            body {
+                background: white;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 40px;
+            }
+
+            main {
+                padding: 25px;
+            }
+
+            .card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+    <header>
+
+        <h2>YTCV | Portafolio</h2>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#perfil">Perfil</a>
+            <a href="#formacion">Formación</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+    </header>
+
+
+    <!-- PRESENTACIÓN -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <span class="tag">
+                Portafolio profesional
+            </span>
+
+            <h1>
+                Yurley Tatiana<br>
+                Cárdenas Valencia
+            </h1>
+
+            <p>
+                Estudiante de octavo semestre de Administración
+                Tecnológica en el ITM, con experiencia en procesos
+                administrativos, comerciales, costos y presupuestos.
+            </p>
+
+            <a href="#experiencia" class="button">
+                Conoce mi trayectoria
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <main>
+
+        <!-- PERFIL PROFESIONAL -->
+
+        <section id="perfil">
+
+            <h2 class="section-title">
+                Perfil profesional
+            </h2>
+
+            <div class="card">
+
+                <p>
+                    Soy estudiante de octavo semestre de Administración
+                    Tecnológica de la Institución Universitaria ITM.
+                    Cuento con experiencia laboral en la Clínica Medellín
+                    como Auxiliar Comercial de Costos y Presupuestos.
+                </p>
+
+                <br>
+
+                <p>
+                    Es un ciudadano global que cuenta con formación
+                    integral, con cualidades éticas y de autonomía para
+                    su desarrollo profesional, con capacidad para planear,
+                    organizar, dirigir, controlar y evaluar los procesos
+                    de gestión del conocimiento, tecnología e innovación,
+                    alineándolos con la estrategia para el logro de los
+                    objetivos de las organizaciones en las que interviene,
+                    lo cual le permite tomar decisiones en contextos
+                    complejos, dinámicos e inciertos.
+                </p>
+
+                <br>
+
+                <p>
+                    Mi interés profesional está orientado al fortalecimiento
+                    de los procesos administrativos y financieros, el análisis
+                    de información y la gestión organizacional.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- FORMACIÓN ACADÉMICA -->
+
+        <section id="formacion">
+
+            <h2 class="section-title">
+                Formación académica
+            </h2>
+
+            <div class="card">
+
+                <h3>
+                    Administración Tecnológica
+                </h3>
+
+                <p>
+                    <strong>Institución:</strong>
+                    Institución Universitaria ITM
+                </p>
+
+                <p>
+                    <strong>Estado:</strong>
+                    En formación
+                </p>
+
+                <p>
+                    <strong>Semestre:</strong>
+                    Octavo semestre
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXPERIENCIA LABORAL -->
+
+        <section id="experiencia">
+
+            <h2 class="section-title">
+                Experiencia laboral
+            </h2>
+
+            <div class="card experience">
+
+                <h3>
+                    Auxiliar Comercial de Costos y Presupuestos
+                </h3>
+
+                <p>
+                    <strong>Empresa:</strong>
+                    Clínica Medellín
+                </p>
+
+                <p>
+                    Experiencia en el área de costos y presupuestos,
+                    vinculada a los procesos de gestión administrativa
+                    y comercial de la institución.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACTO -->
+
+        <section id="contacto">
+
+            <div class="contact">
+
+                <h2>
+                    Conectemos profesionalmente
+                </h2>
+
+                <p>
+                    Estoy interesada en continuar fortaleciendo mi
+                    desarrollo profesional y participar en nuevos
+                    retos laborales.
+                </p>
+
+                <br>
+
+                <p>
+                    <strong>Correo electrónico:</strong>
+
+                    <a href="mailto:tatianacardenas.valencia@outlook.com">
+                        tatianacardenas.valencia@outlook.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Ubicación:</strong>
+                    Medellín, Colombia
+                </p>
+
+                <button
+                    class="button"
+                    onclick="window.print()">
+
+                    Imprimir / Guardar como PDF
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <p>
+            © 2026 Yurley Tatiana Cárdenas Valencia.
+            Portafolio profesional.
+        </p>
+
+    </footer>
+
+</body>
+</html>
