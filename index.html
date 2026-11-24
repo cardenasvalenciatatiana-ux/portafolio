@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portafolio profesional de Yurley Tatiana Cárdenas Valencia">
+
+  <meta name="description"
+        content="Portafolio profesional de Yurley Tatiana Cárdenas Valencia">
+
   <title>Yurley Tatiana Cárdenas Valencia | Portafolio</title>
 
   <style>
@@ -31,6 +34,7 @@
       line-height: 1.7;
     }
 
+    /* ENCABEZADO */
     header {
       background: linear-gradient(135deg, #006b50, #00a878);
       color: white;
@@ -64,6 +68,7 @@
       color: #c8ffe9;
     }
 
+    /* PRESENTACIÓN */
     .hero {
       min-height: 520px;
       padding: 65px 8%;
@@ -75,7 +80,7 @@
       background: var(--blanco);
     }
 
-    /* FOTO DE PERFIL */
+    /* FOTOGRAFÍA DE PERFIL */
     .foto-contenedor {
       width: 270px;
       height: 270px;
@@ -99,7 +104,7 @@
       max-width: 580px;
     }
 
-    .hero-texto .saludo {
+    .saludo {
       color: var(--verde);
       font-weight: bold;
       text-transform: uppercase;
@@ -141,6 +146,7 @@
       transform: translateY(-2px);
     }
 
+    /* SECCIONES */
     section {
       padding: 65px 9%;
     }
@@ -152,6 +158,10 @@
       margin-bottom: 35px;
     }
 
+    .fondo-blanco {
+      background: white;
+    }
+
     .sobre-mi {
       max-width: 950px;
       margin: auto;
@@ -159,10 +169,7 @@
       font-size: 1.08rem;
     }
 
-    .fondo-blanco {
-      background: white;
-    }
-
+    /* TARJETAS */
     .tarjetas {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -192,7 +199,9 @@
       color: #53635b;
     }
 
-    .experiencia {
+    /* EXPERIENCIA */
+    .experiencia,
+    .formacion {
       max-width: 900px;
       margin: auto;
     }
@@ -206,20 +215,17 @@
       box-shadow: 0 4px 14px rgba(0, 60, 40, 0.06);
     }
 
-    .experiencia-item h3 {
+    .experiencia-item h3,
+    .formacion-item h3 {
       color: var(--verde-oscuro);
     }
 
-    .experiencia-item .empresa {
+    .empresa {
       font-weight: 600;
       color: #66776e;
     }
 
-    .formacion {
-      max-width: 900px;
-      margin: auto;
-    }
-
+    /* EDUCACIÓN */
     .formacion-item {
       padding: 18px 22px;
       background: white;
@@ -228,25 +234,22 @@
       border-left: 4px solid var(--verde);
     }
 
-    .formacion-item h3 {
-      color: var(--verde-oscuro);
-    }
-
+    /* REDES SOCIALES */
     .redes {
       text-align: center;
     }
 
-    .redes a {
+    .usuario-red {
       display: inline-block;
-      margin: 8px;
-      padding: 10px 22px;
+      margin-top: 12px;
+      padding: 10px 25px;
       color: white;
       background: var(--verde);
-      text-decoration: none;
       border-radius: 25px;
       font-weight: 600;
     }
 
+    /* CONTACTO */
     .contacto {
       text-align: center;
       background: var(--verde-oscuro);
@@ -261,6 +264,7 @@
       margin: 8px 0;
     }
 
+    /* PIE DE PÁGINA */
     footer {
       background: #004c39;
       color: white;
@@ -269,6 +273,7 @@
       font-size: 0.9rem;
     }
 
+    /* DISEÑO PARA CELULARES */
     @media (max-width: 700px) {
       header {
         justify-content: center;
@@ -300,8 +305,10 @@
 
 <body>
 
+  <!-- ENCABEZADO -->
   <header>
     <h2>YTCV | PORTAFOLIO</h2>
+
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#perfil">Perfil</a>
@@ -322,99 +329,140 @@
           class="foto-perfil"
           src="./imagen.jpg"
           alt="Fotografía de perfil de Yurley Tatiana Cárdenas Valencia"
-          onerror="this.onerror=null; this.alt='No se pudo cargar imagen.jpg'; this.style.display='none'; this.parentElement.style.border='2px dashed #008f69';"
         >
       </div>
 
       <div class="hero-texto">
         <span class="saludo">Bienvenido a mi portafolio</span>
+
         <h1>Yurley Tatiana<br>Cárdenas Valencia</h1>
-        <h3>Administración Tecnológica | Gestión Administrativa</h3>
+
+        <h3>
+          Administración Tecnológica |
+          Gestión Administrativa
+        </h3>
+
         <p>
           Profesional en formación, con experiencia en procesos
           administrativos, financieros y de servicio, interesada
           en la innovación, la tecnología y la gestión organizacional.
         </p>
-        <a class="boton" href="#perfil">Conoce mi perfil</a>
+
+        <a class="boton" href="#perfil">
+          Conoce mi perfil
+        </a>
       </div>
 
     </section>
 
-    <!-- PERFIL -->
+    <!-- PERFIL PROFESIONAL -->
     <section id="perfil" class="fondo-blanco">
+
       <h2 class="titulo-seccion">Perfil profesional</h2>
 
       <div class="sobre-mi">
+
         <p>
-          Soy estudiante de octavo semestre de Administración Tecnológica
-          en el Instituto Tecnológico Metropolitano (ITM), con formación
-          tecnológica en Gestión Administrativa y técnica en Apoyo
-          Administrativo en Salud.
+          Soy estudiante de octavo semestre de Administración
+          Tecnológica en el Instituto Tecnológico Metropolitano
+          (ITM), con formación tecnológica en Gestión Administrativa
+          y técnica en Apoyo Administrativo en Salud.
         </p>
+
         <br>
+
         <p>
-          Me caracterizo por ser una persona autónoma, ética y comprometida
-          con el aprendizaje continuo. Cuento con habilidades para apoyar
-          la planeación, organización, dirección, control y evaluación de
-          procesos administrativos, financieros y de gestión.
+          Me caracterizo por ser una persona autónoma, ética y
+          comprometida con el aprendizaje continuo. Cuento con
+          habilidades para apoyar la planeación, organización,
+          dirección, control y evaluación de procesos administrativos,
+          financieros y de gestión.
         </p>
+
         <br>
+
         <p>
-          Tengo especial interés en la gestión del conocimiento, la
-          tecnología y la innovación como herramientas para contribuir
-          al cumplimiento de los objetivos estratégicos de las organizaciones.
+          Tengo especial interés en la gestión del conocimiento,
+          la tecnología y la innovación como herramientas para
+          contribuir al cumplimiento de los objetivos estratégicos
+          de las organizaciones.
         </p>
+
       </div>
     </section>
 
     <!-- COMPETENCIAS -->
     <section id="competencias">
+
       <h2 class="titulo-seccion">Competencias</h2>
 
       <div class="tarjetas">
+
         <article class="tarjeta">
           <h3>Gestión administrativa</h3>
-          <p>Apoyo y seguimiento de procesos administrativos y organizacionales.</p>
+          <p>
+            Apoyo y seguimiento de procesos administrativos
+            y organizacionales.
+          </p>
         </article>
 
         <article class="tarjeta">
           <h3>Gestión financiera</h3>
-          <p>Análisis de información financiera, costos y presupuestos.</p>
+          <p>
+            Análisis de información financiera, costos
+            y presupuestos.
+          </p>
         </article>
 
         <article class="tarjeta">
           <h3>Servicio al cliente</h3>
-          <p>Atención, orientación y acompañamiento a usuarios y clientes.</p>
+          <p>
+            Atención, orientación y acompañamiento
+            a usuarios y clientes.
+          </p>
         </article>
 
         <article class="tarjeta">
           <h3>Análisis de información</h3>
-          <p>Organización, interpretación y seguimiento de datos para apoyar decisiones.</p>
+          <p>
+            Organización, interpretación y seguimiento
+            de datos para apoyar decisiones.
+          </p>
         </article>
 
         <article class="tarjeta">
           <h3>Innovación y tecnología</h3>
-          <p>Interés en la transformación digital y la mejora de procesos.</p>
+          <p>
+            Interés en la transformación digital
+            y la mejora de procesos.
+          </p>
         </article>
 
         <article class="tarjeta">
           <h3>Trabajo en equipo</h3>
-          <p>Comunicación, responsabilidad y orientación al cumplimiento de objetivos.</p>
+          <p>
+            Comunicación, responsabilidad y orientación
+            al cumplimiento de objetivos.
+          </p>
         </article>
+
       </div>
     </section>
 
-    <!-- EXPERIENCIA -->
+    <!-- EXPERIENCIA PROFESIONAL -->
     <section id="experiencia" class="fondo-blanco">
+
       <h2 class="titulo-seccion">Experiencia profesional</h2>
 
       <div class="experiencia">
+
         <div class="experiencia-item">
           <h3>Auxiliar Comercial de Costos y Presupuestos</h3>
           <p class="empresa">Clínica Medellín</p>
           <p>
-            Experiencia en procesos administrativos relacionados con
-            costos y presupuestos, análisis y gestión de información.
+            Experiencia en procesos administrativos relacionados
+            con costos y presupuestos, análisis y gestión
+            de información.
           </p>
         </div>
 
@@ -422,8 +470,8 @@
           <h3>Procesos administrativos en el sector salud</h3>
           <p class="empresa">Experiencia en instituciones de salud</p>
           <p>
-            Experiencia en admisiones, autorizaciones, facturación
-            y atención administrativa de usuarios.
+            Experiencia en admisiones, autorizaciones,
+            facturación y atención administrativa de usuarios.
           </p>
         </div>
 
@@ -431,18 +479,21 @@
           <h3>Experiencia en el sector financiero y comercial</h3>
           <p class="empresa">Servicios financieros y atención al cliente</p>
           <p>
-            Experiencia en procesos de crédito, servicio y orientación
-            al cliente.
+            Experiencia en procesos de crédito, servicio
+            y orientación al cliente.
           </p>
         </div>
+
       </div>
     </section>
 
-    <!-- EDUCACIÓN -->
+    <!-- FORMACIÓN ACADÉMICA -->
     <section id="formacion">
+
       <h2 class="titulo-seccion">Formación académica</h2>
 
       <div class="formacion">
+
         <div class="formacion-item">
           <h3>Administración Tecnológica</h3>
           <p>Instituto Tecnológico Metropolitano (ITM)</p>
@@ -460,62 +511,91 @@
           <p>Servicio Nacional de Aprendizaje (SENA)</p>
           <p>2013 – 2015</p>
         </div>
+
       </div>
     </section>
 
-    <!-- CERTIFICADOS -->
+    <!-- CERTIFICADOS Y CURSOS -->
     <section class="fondo-blanco">
+
       <h2 class="titulo-seccion">Certificados y cursos</h2>
+
       <div class="sobre-mi">
         <p>
           En esta sección se podrán incorporar certificaciones,
           cursos complementarios y procesos de formación continua.
         </p>
       </div>
+
     </section>
 
-    <!-- HERRAMIENTAS -->
+    <!-- HERRAMIENTAS TECNOLÓGICAS -->
     <section>
+
       <h2 class="titulo-seccion">Herramientas tecnológicas</h2>
 
       <div class="tarjetas">
+
         <article class="tarjeta">
           <h3>Microsoft Excel</h3>
-          <p>Excel intermedio, organización y análisis de información.</p>
+          <p>
+            Excel intermedio, organización y análisis
+            de información.
+          </p>
         </article>
 
         <article class="tarjeta">
           <h3>Microsoft Office</h3>
-          <p>Herramientas para la gestión documental y administrativa.</p>
+          <p>
+            Herramientas para la gestión documental
+            y administrativa.
+          </p>
         </article>
 
         <article class="tarjeta">
           <h3>Herramientas digitales</h3>
-          <p>Interés en soluciones tecnológicas para la optimización de procesos.</p>
+          <p>
+            Interés en soluciones tecnológicas
+            para la optimización de procesos.
+          </p>
         </article>
+
       </div>
     </section>
 
     <!-- REDES SOCIALES -->
     <section class="redes fondo-blanco">
+
       <h2 class="titulo-seccion">Redes sociales</h2>
-      <p>Encuéntrame en redes sociales como:</p>
-      <a href="https://www.instagram.com/ytcv/" target="_blank" rel="noopener noreferrer">
-        Instagram: @ytcv
-      </a>
+
+      <p>Encuéntrame como:</p>
+
+      <span class="usuario-red">@ytcv</span>
+
     </section>
 
     <!-- CONTACTO -->
     <section class="contacto" id="contacto">
+
       <h2 class="titulo-seccion">Contacto</h2>
+
       <p>Gracias por visitar mi portafolio profesional.</p>
-      <p>Estoy interesada en oportunidades de crecimiento y desarrollo profesional.</p>
+
+      <p>
+        Estoy interesada en oportunidades de crecimiento
+        y desarrollo profesional.
+      </p>
+
     </section>
 
   </main>
 
+  <!-- PIE DE PÁGINA -->
   <footer>
-    <p>© 2026 Yurley Tatiana Cárdenas Valencia | Portafolio profesional</p>
+    <p>
+      © 2026 Yurley Tatiana Cárdenas Valencia |
+      Portafolio profesional
+    </p>
   </footer>
 
 </body>
