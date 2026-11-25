@@ -4,9 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description"
-        content="Portafolio profesional de Yurley Tatiana Cárdenas Valencia">
+  <meta name="description" content="Portafolio profesional de Yurley Tatiana Cárdenas Valencia">
 
   <title>Yurley Tatiana Cárdenas Valencia | Portafolio</title>
 
@@ -68,6 +66,41 @@
       color: #c8ffe9;
     }
 
+    /* BOTÓN PDF */
+    .acciones {
+      text-align: center;
+      padding: 20px;
+      background: white;
+    }
+
+    .boton-pdf {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 25px;
+      border: none;
+      border-radius: 30px;
+      background: var(--verde);
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 100, 70, 0.18);
+      transition: 0.3s;
+    }
+
+    .boton-pdf:hover {
+      background: var(--verde-oscuro);
+      transform: translateY(-2px);
+    }
+
+    .boton-pdf:disabled {
+      opacity: 0.6;
+      cursor: wait;
+      transform: none;
+    }
+
     /* PRESENTACIÓN */
     .hero {
       min-height: 520px;
@@ -98,6 +131,18 @@
       display: block;
       object-fit: cover;
       object-position: center 35%;
+    }
+
+    .foto-error {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      text-align: center;
+      color: var(--verde-oscuro);
+      font-size: 13px;
     }
 
     .hero-texto {
@@ -143,7 +188,6 @@
 
     .boton:hover {
       background: var(--verde-oscuro);
-      transform: translateY(-2px);
     }
 
     /* SECCIONES */
@@ -187,7 +231,6 @@
 
     .tarjeta:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 60, 40, 0.12);
     }
 
     .tarjeta h3 {
@@ -213,6 +256,7 @@
       margin-bottom: 20px;
       border-radius: 0 12px 12px 0;
       box-shadow: 0 4px 14px rgba(0, 60, 40, 0.06);
+      break-inside: avoid;
     }
 
     .experiencia-item h3,
@@ -232,9 +276,10 @@
       margin-bottom: 15px;
       border-radius: 10px;
       border-left: 4px solid var(--verde);
+      break-inside: avoid;
     }
 
-    /* REDES SOCIALES */
+    /* REDES */
     .redes {
       text-align: center;
     }
@@ -273,7 +318,7 @@
       font-size: 0.9rem;
     }
 
-    /* DISEÑO PARA CELULARES */
+    /* RESPONSIVE */
     @media (max-width: 700px) {
       header {
         justify-content: center;
@@ -300,6 +345,124 @@
         padding: 45px 6%;
       }
     }
+
+    /* CONFIGURACIÓN PARA EXPORTAR A PDF */
+    @page {
+      size: A4;
+      margin: 14mm;
+    }
+
+    @media print {
+      body {
+        background: white !important;
+        color: #24352f !important;
+        font-size: 10pt;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      header {
+        padding: 12px 5%;
+        background: #006b50 !important;
+      }
+
+      header h2 {
+        font-size: 15pt;
+      }
+
+      nav {
+        display: none !important;
+      }
+
+      .acciones,
+      .boton,
+      .no-imprimir {
+        display: none !important;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 25px 5%;
+        gap: 30px;
+        flex-wrap: nowrap;
+        break-inside: avoid;
+        background: white !important;
+      }
+
+      .foto-contenedor {
+        width: 175px;
+        height: 175px;
+        flex-shrink: 0;
+        box-shadow: none;
+        border: 5px solid #e8f5ef;
+        print-color-adjust: exact !important;
+      }
+
+      .foto-perfil {
+        display: block !important;
+      }
+
+      .hero-texto h1 {
+        font-size: 24pt;
+      }
+
+      .hero-texto p {
+        font-size: 10pt;
+      }
+
+      section {
+        padding: 25px 5%;
+      }
+
+      .titulo-seccion {
+        font-size: 17pt;
+        margin-bottom: 18px;
+      }
+
+      .sobre-mi {
+        font-size: 10pt;
+      }
+
+      .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .tarjeta {
+        box-shadow: none;
+        border: 1px solid #dce9e2;
+        border-top: 3px solid #008f69;
+        padding: 15px;
+        break-inside: avoid;
+      }
+
+      .experiencia-item,
+      .formacion-item {
+        box-shadow: none;
+        break-inside: avoid;
+        margin-bottom: 12px;
+      }
+
+      .fondo-blanco {
+        background: white !important;
+      }
+
+      .contacto,
+      footer {
+        background: #006b50 !important;
+        color: white !important;
+        print-color-adjust: exact !important;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      section,
+      .tarjetas {
+        break-inside: auto;
+      }
+    }
   </style>
 </head>
 
@@ -319,14 +482,28 @@
     </nav>
   </header>
 
+  <!-- BOTÓN PARA EXPORTAR PDF -->
+  <div class="acciones">
+    <button
+      class="boton-pdf"
+      id="btnPDF"
+      type="button"
+      onclick="exportarPDF()"
+    >
+      <span aria-hidden="true">📄</span>
+      Descargar portafolio en PDF
+    </button>
+  </div>
+
   <main>
 
     <!-- INICIO Y FOTO DE PERFIL -->
     <section class="hero" id="inicio">
 
-      <div class="foto-contenedor">
+      <div class="foto-contenedor" id="contenedorFoto">
         <img
           class="foto-perfil"
+          id="fotoPerfil"
           src="./imagen.jpg"
           alt="Fotografía de perfil de Yurley Tatiana Cárdenas Valencia"
         >
@@ -361,7 +538,6 @@
       <h2 class="titulo-seccion">Perfil profesional</h2>
 
       <div class="sobre-mi">
-
         <p>
           Soy estudiante de octavo semestre de Administración
           Tecnológica en el Instituto Tecnológico Metropolitano
@@ -387,7 +563,6 @@
           contribuir al cumplimiento de los objetivos estratégicos
           de las organizaciones.
         </p>
-
       </div>
     </section>
 
@@ -597,6 +772,59 @@
       Portafolio profesional
     </p>
   </footer>
+
+  <script>
+    // COMPROBAR LA CARGA DE LA FOTOGRAFÍA
+    const foto = document.getElementById("fotoPerfil");
+    const contenedorFoto = document.getElementById("contenedorFoto");
+
+    foto.addEventListener("error", function () {
+      foto.style.display = "none";
+
+      contenedorFoto.innerHTML =
+        '<div class="foto-error">No se encontró imagen.jpg. Verifica que esté en la carpeta principal del repositorio.</div>';
+    });
+
+    // FUNCIÓN PARA EXPORTAR EL PORTAFOLIO A PDF
+    async function exportarPDF() {
+      const boton = document.getElementById("btnPDF");
+
+      boton.disabled = true;
+      boton.textContent = "Preparando PDF...";
+
+      try {
+        // Comprobar que la fotografía esté cargada
+        const imagen = document.getElementById("fotoPerfil");
+
+        if (!imagen || !imagen.complete || imagen.naturalWidth === 0) {
+          throw new Error(
+            "No se pudo cargar imagen.jpg. Verifica que esté subida al repositorio junto a index.html."
+          );
+        }
+
+        // Esperar a que la imagen esté lista
+        if (imagen.decode) {
+          await imagen.decode();
+        }
+
+        // Pequeña espera para preparar la página
+        await new Promise(resolve => setTimeout(resolve, 300));
+
+        // Nombre del archivo PDF
+        document.title = "Portafolio_Yurley_Tatiana_Cardenas_Valencia";
+
+        // Abrir la ventana de impresión para guardar como PDF
+        window.print();
+
+      } catch (error) {
+        alert(error.message);
+      } finally {
+        boton.disabled = false;
+        boton.innerHTML = '<span aria-hidden="true">📄</span> Descargar portafolio en PDF';
+      }
+    }
+
+  </script>
 
 </body>
 </html>
